@@ -29,5 +29,7 @@ namespace Baseball_Odds_Analytics.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Baseball_Odds_Analytics.Models.Odds> Odds { get; set; }
     }
 }
