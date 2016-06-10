@@ -31,5 +31,7 @@ namespace BaseballOdds.Models
         }
 
         public System.Data.Entity.DbSet<BaseballOdds.Models.Odds> Odds { get; set; }
+
+        public System.Data.Entity.DbSet<BaseballOdds.Models.Teams> Teams { get; set; }
     }
 }
