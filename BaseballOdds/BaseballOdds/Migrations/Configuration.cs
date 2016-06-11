@@ -100,9 +100,129 @@ namespace BaseballOdds.Migrations
 
                 );
 
-
-            );
-
+            context.Teams.AddOrUpdate(s => s.Name,
+                new Teams
+                {
+                    TeamId = 111,
+                    Name = "Boston Red Sox",
+                }, new Teams
+                {
+                    TeamId = 134,
+                    Name = "Pittsburg Pirates",
+                }, new Teams
+                {
+                    TeamId = 115,
+                    Name = "Colorado Rockies",
+                }, new Teams
+                {
+                    TeamId = 146,
+                    Name = "Miami Marlins",
+                }, new Teams
+                {
+                    TeamId = 116,
+                    Name = "Detroit Tigers",
+                }, new Teams
+                {
+                    TeamId = 138,
+                    Name = "St. Louis Cardinals",
+                }, new Teams
+                {
+                    TeamId = 118,
+                    Name = "Kansas City Royals",
+                }, new Teams
+                {
+                    TeamId = 140,
+                    Name = "Texas Rangers",
+                }, new Teams
+                {
+                    TeamId = 136,
+                    Name = "Seattle Mariners",
+                }, new Teams
+                {
+                    TeamId = 109,
+                    Name = "Arizona Diamondbacks",
+                }, new Teams
+                {
+                    TeamId = 110,
+                    Name = "Baltimore Orioles",
+                }, new Teams
+                {
+                    TeamId = 108,
+                    Name = "Los Angeles Angels",
+                }, new Teams
+                {
+                    TeamId = 112,
+                    Name = "Chicago Cubs",
+                }, new Teams
+                {
+                    TeamId = 114,
+                    Name = "Cleveland Indians",
+                }, new Teams
+                {
+                    TeamId = 137,
+                    Name = "San Francisco Giants",
+                }, new Teams
+                {
+                    TeamId = 120,
+                    Name = "Washington Nationals",
+                }, new Teams
+                {
+                    TeamId = 133,
+                    Name = "Oakland Athletics",
+                }, new Teams
+                {
+                    TeamId = 158,
+                    Name = "Milwaukee Brewers",
+                }, new Teams
+                {
+                    TeamId = 142,
+                    Name = "Minnesota Twins",
+                }, new Teams
+                {
+                    TeamId = 147,
+                    Name = "New York Yankees",
+                }, new Teams
+                {
+                    TeamId = 113,
+                    Name = "Cincinnati Reds",
+                }, new Teams
+                {
+                    TeamId = 145,
+                    Name = "Chicago White Sox",
+                }, new Teams
+                {
+                    TeamId = 139,
+                    Name = "Tampa Bay Rays",
+                }, new Teams
+                {
+                    TeamId = 117,
+                    Name = "Houston Astros",
+                }, new Teams
+                {
+                    TeamId = 135,
+                    Name = "San Diego Padres",
+                }, new Teams
+                {
+                    TeamId = 141,
+                    Name = "Toronto Blue Jays",
+                }, new Teams
+                {
+                    TeamId = 121,
+                    Name = "New York Mets",
+                }, new Teams
+                {
+                    TeamId = 119,
+                    Name = "Los Angeles Dodgers",
+                }, new Teams
+                {
+                    TeamId = 143,
+                    Name = "Philadelphia Phillies",
+                }, new Teams
+                {
+                    TeamId = 144,
+                    Name = "Atlanta Braves",
+                }
+                );
         }
 
 

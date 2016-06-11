@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Update all","Update", "Teams")
 </p>
 <table class="table">
     <tr>
@@ -24,16 +24,13 @@
             @Html.DisplayNameFor(model => model.Losses)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HomeWins)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AwayWins)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.RunsScored)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.RunsAgainst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamId) 
         </th>
         <th></th>
     </tr>
@@ -53,21 +50,16 @@
             @Html.DisplayFor(modelItem => item.Losses)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HomeWins)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AwayWins)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.RunsScored)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.RunsAgainst)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.DisplayFor(modelItem => item.TeamId)
+        </td>
+        <td>
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

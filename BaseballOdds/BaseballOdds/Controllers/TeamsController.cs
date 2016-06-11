@@ -46,7 +46,7 @@ namespace BaseballOdds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Games,Wins,Losses,HomeWins,AwayWins,RunsScored,RunsAgainst")] Teams teams)
+        public ActionResult Create([Bind(Include = "Id,Name,Games,Wins,Losses,RunsScored,RunsAgainst,TeamId")] Teams teams)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace BaseballOdds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Games,Wins,Losses,HomeWins,AwayWins,RunsScored,RunsAgainst")] Teams teams)
+        public ActionResult Edit([Bind(Include = "Id,Name,Games,Wins,Losses,RunsScored,RunsAgainst,TeamId")] Teams teams)
         {
             if (ModelState.IsValid)
             {
@@ -114,6 +114,14 @@ namespace BaseballOdds.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        // GET: Teams
+        public ActionResult Update()
+        {
+
+        }
+
+
 
         protected override void Dispose(bool disposing)
         {

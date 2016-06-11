@@ -43,22 +43,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.HomeWins)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HomeWins)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AwayWins)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AwayWins)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.RunsScored)
         </dt>
 
@@ -74,9 +58,16 @@
             @Html.DisplayFor(model => model.RunsAgainst)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamId)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
