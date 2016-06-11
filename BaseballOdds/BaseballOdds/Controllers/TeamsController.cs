@@ -118,6 +118,7 @@ namespace BaseballOdds.Controllers
         // GET: Teams
         public ActionResult Update()
         {
+            return RedirectToAction("Index");
 
         }
 
