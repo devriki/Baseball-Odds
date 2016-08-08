@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BaseballOdds.Models;
+using BaseballOdds.Helpers;
 
 namespace BaseballOdds.Controllers
 {
@@ -46,7 +47,7 @@ namespace BaseballOdds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Games,Wins,Losses,RunsScored,RunsAgainst,TeamId")] Teams teams)
+        public ActionResult Create([Bind(Include = "Id,Name,TeamId")] Teams teams)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +79,7 @@ namespace BaseballOdds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Games,Wins,Losses,RunsScored,RunsAgainst,TeamId")] Teams teams)
+        public ActionResult Edit([Bind(Include = "Id,Name,TeamId")] Teams teams)
         {
             if (ModelState.IsValid)
             {
@@ -118,7 +119,9 @@ namespace BaseballOdds.Controllers
         // GET: Teams
         public ActionResult Update()
         {
-            return RedirectToAction("Index");
+            XMLReader readTeams = new XMLReader();
+            var data = readTeams.UpdateTeams();
+            return View("Index",data);
 
         }
 
